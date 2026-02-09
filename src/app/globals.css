@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@theme {
+  /* Core Aesthetic: Eco-Tech Premium */
+  --color-obsidian: #0a0a0a;
+  --color-pure-black: #000000;
+  --color-electric-green: #4ade80;
+  --color-solar-yellow: #facc15;
+  --color-slate-gray: #1e293b;
+  --color-silver-gray: #94a3b8;
+  --color-glass-border: rgba(255, 255, 255, 0.06);
+
+  --font-heading: "Outfit", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "Space Grotesk", monospace;
+
+  --radius-modern: 12px;
+}
+
+:root {
+  --background: #000000;
+  --foreground: #f8fafc;
+}
+
+body {
+  background-color: var(--color-pure-black);
+  color: var(--color-silver-gray);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  color: var(--foreground);
+  font-weight: 700;
+}
+
+/* Custom Component Classes */
+.glass-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--color-glass-border);
+  border-radius: var(--radius-modern);
+}
+
+.cta-button {
+  background-color: var(--color-electric-green);
+  color: var(--color-obsidian);
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cta-button:hover {
+  background-color: #ffffff;
+  transform: scale(1.05);
+}
+
+.section-padding {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+/* Custom animations */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
