@@ -1,6 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import Header from "@/components/layout/Header";
 import TrustBar from "@/components/layout/TrustBar";
 import Capabilities from "@/components/sections/Capabilities";
 import FleetAdvantage from "@/components/sections/FleetAdvantage";
@@ -20,6 +21,7 @@ const ScrollSequence = dynamic(() => import("@/components/animation/ScrollSequen
 export default function Home() {
   return (
     <main className="bg-black">
+      <Header />
       {/* Hero Animation Section */}
       <section className="relative">
         <ScrollSequence />
