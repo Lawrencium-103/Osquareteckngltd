@@ -18,7 +18,7 @@ export default function Header() {
                             src="/images/logo.png"
                             alt="OSQUARETECK Logo"
                             fill
-                            className="object-contain group-hover:scale-110 transition-transform duration-500"
+                            className="object-contain group-hover:scale-110 transition-transform duration-500 mix-blend-multiply brightness-125 contrast-125"
                         />
                     </div>
                     <div className="flex flex-col">
