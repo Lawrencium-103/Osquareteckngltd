@@ -13,12 +13,12 @@ export default function Header() {
         >
             <div className="container mx-auto px-6 h-20 flex items-center justify-between">
                 <div className="flex items-center gap-4 group cursor-pointer">
-                    <div className="relative w-12 h-12">
+                    <div className="relative w-12 h-12 bg-white rounded-full p-1 overflow-hidden">
                         <Image
                             src="/images/logo.png"
                             alt="OSQUARETECK Logo"
                             fill
-                            className="object-contain group-hover:scale-110 transition-transform duration-500 mix-blend-multiply brightness-125 contrast-125"
+                            className="object-contain group-hover:scale-110 transition-transform duration-500 mix-blend-multiply"
                         />
                     </div>
                     <div className="flex flex-col">
