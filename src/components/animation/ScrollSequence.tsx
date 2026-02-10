@@ -19,7 +19,7 @@ export default function ScrollSequence() {
     restDelta: 0.001
   });
 
-  const totalFrames = 521;
+  const totalFrames = 632;
   const frameIndex = useTransform(smoothProgress, [0, 1], [0, totalFrames - 1]);
 
   useEffect(() => {
@@ -31,9 +31,12 @@ export default function ScrollSequence() {
       for (let i = 1; i <= 137; i++) {
         imagePaths.push(`/images/1/${i.toString().padStart(4, "0")}.jpg`);
       }
-      // Folder 2: 1-192
+      // Folder 2: 1-192 + a0022-a0132
       for (let i = 1; i <= 192; i++) {
         imagePaths.push(`/images/2/${i.toString().padStart(4, "0")}.jpg`);
+      }
+      for (let i = 22; i <= 132; i++) {
+        imagePaths.push(`/images/2/a${i.toString().padStart(4, "0")}.jpg`);
       }
       // Folder 3: 1-192
       for (let i = 1; i <= 192; i++) {
@@ -67,7 +70,7 @@ export default function ScrollSequence() {
       const img = images[roundedIndex];
       if (img && canvasRef.current) {
         context.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);
-        
+
         // Draw image scaled to cover the canvas
         const canvasAspect = canvasRef.current.width / canvasRef.current.height;
         const imgAspect = img.width / img.height;
