@@ -12,9 +12,7 @@ import ContactHQ from "@/components/sections/ContactHQ";
 const ScrollSequence = dynamic(() => import("@/components/animation/ScrollSequence"), {
   ssr: false,
   loading: () => (
-    <div className="h-screen w-full bg-black flex items-center justify-center">
-      <div className="text-electric-green font-mono animate-pulse">LOADING SEQUENCE...</div>
-    </div>
+    <div className="h-screen w-full bg-black flex items-center justify-center" />
   ),
 });
 
@@ -37,9 +35,9 @@ export default function Home() {
               Building affordable, high-performance electric vehicles and energy infrastructure for Africa.
             </p>
             <div className="mt-12 pointer-events-auto">
-              <button className="cta-button">
+              <a href="mailto:osquareteckltd@gmail.com?subject=Partnership Inquiry" className="cta-button">
                 Partner With Us
-              </button>
+              </a>
             </div>
           </div>
         </div>

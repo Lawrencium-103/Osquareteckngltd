@@ -42,9 +42,12 @@ export default function Header() {
                             {item}
                         </a>
                     ))}
-                    <button className="text-xs font-mono uppercase tracking-[0.3em] bg-electric-green text-obsidian px-5 py-2 rounded-full font-bold hover:bg-white transition-all transform hover:scale-105">
-                        Connect
-                    </button>
+                    <a
+                        href="mailto:osquareteckltd@gmail.com?subject=Inquiry from Website"
+                        className="text-xs font-mono uppercase tracking-[0.3em] bg-electric-green text-obsidian px-5 py-2 rounded-full font-bold hover:bg-white transition-all transform hover:scale-105"
+                    >
+                        Talk to Us
+                    </a>
                 </nav>
             </div>
         </motion.header>

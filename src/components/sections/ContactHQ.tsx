@@ -49,9 +49,12 @@ export default function ContactHQ() {
                                     className="w-full bg-white/5 border-b border-glass-border py-4 focus:border-electric-green outline-none transition-colors text-foreground resize-none"
                                 />
                             </div>
-                            <button type="submit" className="cta-button w-full justify-center py-6 mt-8">
+                            <a
+                                href="mailto:osquareteckltd@gmail.com?subject=Project Inquiry"
+                                className="cta-button w-full justify-center py-6 mt-8 text-center"
+                            >
                                 Send Inquiry
-                            </button>
+                            </a>
                         </form>
                     </motion.div>
 
@@ -76,20 +79,24 @@ export default function ContactHQ() {
                                 <p className="text-2xl text-foreground">
                                     +234 807 205 0543
                                 </p>
-                                <p className="text-silver-gray mt-2">osquareteckltd@gmail.com</p>
+                                <a href="mailto:osquareteckltd@gmail.com" className="text-silver-gray mt-2 hover:text-electric-green transition-colors inline-block">
+                                    osquareteckltd@gmail.com
+                                </a>
                             </div>
                         </div>
 
-                        {/* Stylized Dark Mode Map Placeholder */}
+                        {/* Google Map Embed */}
                         <div className="relative w-full h-80 rounded-modern overflow-hidden border border-glass-border bg-obsidian group">
-                            <div className="absolute inset-0 bg-[url('https://api.mapbox.com/styles/v1/mapbox/dark-v10/static/3.308,6.666,12/800x400?access_token=placeholder')] bg-cover opacity-50 contrast-125 saturate-0 group-hover:saturate-100 transition-all duration-700" title="Interactive Map Placeholder" />
-                            <div className="absolute inset-0 flex items-center justify-center">
-                                <div className="bg-electric-green/20 backdrop-blur-md px-6 py-3 rounded-full border border-electric-green/40 text-electric-green font-mono text-sm">
-                                    OPEN INTERACTIVE GRID
-                                </div>
-                            </div>
-                            {/* Decorative scanline effect */}
-                            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/5 to-transparent h-20 w-full top-[-100px] animate-[scan_4s_linear_infinite]" />
+                            <iframe
+                                width="100%"
+                                height="100%"
+                                frameBorder="0"
+                                scrolling="no"
+                                marginHeight={0}
+                                marginWidth={0}
+                                src="https://maps.google.com/maps?q=4%20Salako%20Street%2C%20off%20CLEM%20road%2C%20Jankara%20Ijaiye%2C%20Alagbado%2C%20Lagos%20State%2C%20Nigeria&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                                className="opacity-80 group-hover:opacity-100 transition-opacity duration-500 grayscale group-hover:grayscale-0"
+                            ></iframe>
                         </div>
                     </div>
                 </div>

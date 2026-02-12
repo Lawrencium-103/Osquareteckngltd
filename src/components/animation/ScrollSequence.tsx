@@ -24,7 +24,6 @@ export default function ScrollSequence() {
 
   useEffect(() => {
     const loadImages = async () => {
-      const loadedImages: HTMLImageElement[] = [];
       const imagePaths: string[] = [];
 
       // Folder 1: 1-137
@@ -43,16 +42,22 @@ export default function ScrollSequence() {
         imagePaths.push(`/images/3/${i.toString().padStart(4, "0")}.jpg`);
       }
 
-      const promises = imagePaths.map((path) => {
-        return new Promise<HTMLImageElement>((resolve) => {
+      // Load images with error handling to prevent blocking
+      const loadPromises = imagePaths.map((path) => {
+        return new Promise<HTMLImageElement | null>((resolve) => {
           const img = new Image();
           img.src = path;
           img.onload = () => resolve(img);
+          img.onerror = () => {
+            console.warn(`Failed to load image: ${path}`);
+            resolve(null);
+          };
         });
       });
 
-      const results = await Promise.all(promises);
-      setImages(results);
+      const results = await Promise.all(loadPromises);
+      // Filter out failed images to avoid empty frames
+      setImages(results.filter((img): img is HTMLImageElement => img !== null));
       setIsLoaded(true);
     };
 
@@ -124,11 +129,7 @@ export default function ScrollSequence() {
           className="h-full w-full object-cover opacity-80"
         />
         {!isLoaded && (
-          <div className="absolute inset-0 flex items-center justify-center bg-black">
-            <div className="text-electric-green font-mono text-xl animate-pulse">
-              INITIALIZING SYSTEMS...
-            </div>
-          </div>
+          <div className="absolute inset-0 flex items-center justify-center bg-black" />
         )}
       </div>
     </div>

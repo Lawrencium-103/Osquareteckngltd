@@ -33,9 +33,6 @@ export default function Capabilities() {
                                 className="object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
-                            <div className="absolute bottom-6 left-6 font-mono text-xs text-electric-green">
-                                OSQ-X1 SYSTEM | 3D RENDER
-                            </div>
                         </div>
                     </motion.div>
                 </div>
@@ -65,9 +62,6 @@ export default function Capabilities() {
                                 className="object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
-                            <div className="absolute bottom-6 left-6 font-mono text-xs text-solar-yellow">
-                                OSQ-FLOW GRID | SYSTEM PROTOYPE
-                            </div>
                         </div>
                     </motion.div>
                 </div>
