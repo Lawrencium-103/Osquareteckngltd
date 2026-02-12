@@ -84,9 +84,6 @@ export default function ContactHQ() {
                                 >
                                     +234 807 205 0543
                                 </a>
-                                <a href="mailto:osquareteckltd@gmail.com" className="text-silver-gray mt-2 hover:text-electric-green transition-colors inline-block">
-                                    osquareteckltd@gmail.com
-                                </a>
                             </div>
                         </div>
 
