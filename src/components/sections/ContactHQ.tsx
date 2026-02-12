@@ -76,9 +76,14 @@ export default function ContactHQ() {
                                 <h3 className="text-electric-green font-mono text-xs uppercase tracking-widest mb-4 flex items-center gap-3">
                                     <Phone size={16} /> Connection
                                 </h3>
-                                <p className="text-2xl text-foreground">
+                                <a
+                                    href="https://wa.me/2348072050543"
+                                    className="text-2xl text-foreground hover:text-electric-green transition-colors inline-flex items-center gap-2"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
                                     +234 807 205 0543
-                                </p>
+                                </a>
                                 <a href="mailto:osquareteckltd@gmail.com" className="text-silver-gray mt-2 hover:text-electric-green transition-colors inline-block">
                                     osquareteckltd@gmail.com
                                 </a>
